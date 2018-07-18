@@ -21,7 +21,7 @@ component = react { displayName: "ControlledInput", initialState, receiveProps, 
       
     render _ state setState =
       fragment
-        [ R.input
+        [ R.input_
             { onChange:
                 Events.handler
                   (preventDefault >>> Events.merge { targetValue, timeStamp })
@@ -31,6 +31,6 @@ component = react { displayName: "ControlledInput", initialState, receiveProps, 
                                }
             , value: state.value
             }
-        , R.p_ [ R.text ("Current value = " <> show state.value) ]
-        , R.p_ [ R.text ("Changed at = " <> maybe "never" show state.timeStamp) ]
+        , R.p_ {} [ R.text ("Current value = " <> show state.value) ]
+        , R.p_ {} [ R.text ("Changed at = " <> maybe "never" show state.timeStamp) ]
         ]

@@ -45,11 +45,8 @@ exports.component_ = function(spec) {
   return Component;
 };
 
-exports.createElement_ = function(el, attrs) {
-  return React.createElement.apply(
-    null,
-    [el, attrs].concat((attrs && attrs.children) || [])
-  );
+exports.createElement_ = function(el, attrs, children) {
+  return React.createElement.apply(null, [el, attrs].concat(children || []));
 };
 
 exports.createElementKeyed_ = React.createElement;

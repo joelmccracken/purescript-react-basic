@@ -25,8 +25,8 @@ component = react { displayName: "Counter", initialState, receiveProps, render }
       pure unit
 
     render props state setState =
-      R.button
+      R.button_
         { onClick: Events.handler_ do
-                     setState \s -> s { counter = s.counter + 1 }
-        , children: [ R.text (props.label <> ": " <> show state.counter) ]
+            setState \s -> s { counter = s.counter + 1 }
         }
+        [ R.text (props.label <> ": " <> show state.counter) ]

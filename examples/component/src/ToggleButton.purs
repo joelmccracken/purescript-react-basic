@@ -20,7 +20,6 @@ component = react { displayName: "ToggleButton", initialState, receiveProps, ren
       setState _ { on = props.on }
 
     render _ state setState =
-      R.button
-        { onClick: Events.handler_ (setState \s -> s { on = not s.on })
-        , children: [ R.text if state.on then "On" else "Off" ]
-        }
+      R.button_
+        { onClick: Events.handler_ (setState \s -> s { on = not s.on }) }
+        [ R.text if state.on then "On" else "Off" ]

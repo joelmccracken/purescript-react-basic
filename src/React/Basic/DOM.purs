@@ -8,7 +8,7 @@
 module React.Basic.DOM where
 
 import Prim.Row (class Union)
-import React.Basic (JSX, ReactComponent, createElement)
+import React.Basic (JSX, ReactComponent, createElement, createVoidElement)
 import React.Basic.Events (EventHandler)
 import Unsafe.Coerce (unsafeCoerce)
 
@@ -126,13 +126,13 @@ type SharedProps specific =
 unsafeCreateDOMComponent :: forall props. String -> ReactComponent props
 unsafeCreateDOMComponent = unsafeCoerce
 
+
 -- | -------------------------------
 -- | GENERATED CODE BELOW THIS LINE!
 -- | -------------------------------
 
 type Props_a =
-  ( children :: Array JSX
-  , coords :: String
+  ( coords :: String
   , download :: String
   , href :: String
   , name :: String
@@ -142,44 +142,32 @@ type Props_a =
   , type :: String
   )
 
-a
+a_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_a)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-a = createElement (unsafeCreateDOMComponent "a")
-
-a_ :: Array JSX -> JSX
-a_ children = a { children }
+a_ = createElement (unsafeCreateDOMComponent "a")
 
 type Props_abbr =
-  ( children :: Array JSX
-  , title :: String
+  ( title :: String
   )
 
-abbr
+abbr_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_abbr)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-abbr = createElement (unsafeCreateDOMComponent "abbr")
+abbr_ = createElement (unsafeCreateDOMComponent "abbr")
 
-abbr_ :: Array JSX -> JSX
-abbr_ children = abbr { children }
+type Props_address =()
 
-type Props_address =
-  ( children :: Array JSX
-  )
-
-address
+address_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_address)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-address = createElement (unsafeCreateDOMComponent "address")
-
-address_ :: Array JSX -> JSX
-address_ children = address { children }
+address_ = createElement (unsafeCreateDOMComponent "address")
 
 type Props_area =
   ( alt :: String
@@ -192,416 +180,302 @@ type Props_area =
   , type :: String
   )
 
-area
+area_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_area)
-  => Record attrs
+  => Record attrs 
   -> JSX
-area = createElement (unsafeCreateDOMComponent "area")
+area_ = createVoidElement (unsafeCreateDOMComponent "area")
 
-type Props_article =
-  ( children :: Array JSX
-  )
+type Props_article =()
 
-article
+article_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_article)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-article = createElement (unsafeCreateDOMComponent "article")
+article_ = createElement (unsafeCreateDOMComponent "article")
 
-article_ :: Array JSX -> JSX
-article_ children = article { children }
+type Props_aside =()
 
-type Props_aside =
-  ( children :: Array JSX
-  )
-
-aside
+aside_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_aside)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-aside = createElement (unsafeCreateDOMComponent "aside")
-
-aside_ :: Array JSX -> JSX
-aside_ children = aside { children }
+aside_ = createElement (unsafeCreateDOMComponent "aside")
 
 type Props_audio =
-  ( children :: Array JSX
-  , controls :: Boolean
+  ( controls :: Boolean
   , loop :: Boolean
   , muted :: Boolean
   , preload :: String
   , src :: String
   )
 
-audio
+audio_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_audio)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-audio = createElement (unsafeCreateDOMComponent "audio")
+audio_ = createElement (unsafeCreateDOMComponent "audio")
 
-audio_ :: Array JSX -> JSX
-audio_ children = audio { children }
+type Props_b =()
 
-type Props_b =
-  ( children :: Array JSX
-  )
-
-b
+b_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_b)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-b = createElement (unsafeCreateDOMComponent "b")
-
-b_ :: Array JSX -> JSX
-b_ children = b { children }
+b_ = createElement (unsafeCreateDOMComponent "b")
 
 type Props_base =
   ( href :: String
   , target :: String
   )
 
-base
+base_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_base)
-  => Record attrs
+  => Record attrs 
   -> JSX
-base = createElement (unsafeCreateDOMComponent "base")
+base_ = createVoidElement (unsafeCreateDOMComponent "base")
 
-type Props_bdi =
-  ( children :: Array JSX
-  )
+type Props_bdi =()
 
-bdi
+bdi_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_bdi)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-bdi = createElement (unsafeCreateDOMComponent "bdi")
-
-bdi_ :: Array JSX -> JSX
-bdi_ children = bdi { children }
+bdi_ = createElement (unsafeCreateDOMComponent "bdi")
 
 type Props_bdo =
-  ( children :: Array JSX
-  , dir :: String
+  ( dir :: String
   )
 
-bdo
+bdo_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_bdo)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-bdo = createElement (unsafeCreateDOMComponent "bdo")
-
-bdo_ :: Array JSX -> JSX
-bdo_ children = bdo { children }
+bdo_ = createElement (unsafeCreateDOMComponent "bdo")
 
 type Props_blockquote =
-  ( children :: Array JSX
-  , cite :: String
+  ( cite :: String
   )
 
-blockquote
+blockquote_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_blockquote)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-blockquote = createElement (unsafeCreateDOMComponent "blockquote")
+blockquote_ = createElement (unsafeCreateDOMComponent "blockquote")
 
-blockquote_ :: Array JSX -> JSX
-blockquote_ children = blockquote { children }
+type Props_body =()
 
-type Props_body =
-  ( children :: Array JSX
-  )
-
-body
+body_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_body)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-body = createElement (unsafeCreateDOMComponent "body")
-
-body_ :: Array JSX -> JSX
-body_ children = body { children }
+body_ = createElement (unsafeCreateDOMComponent "body")
 
 type Props_br =()
 
-br
+br_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_br)
-  => Record attrs
+  => Record attrs 
   -> JSX
-br = createElement (unsafeCreateDOMComponent "br")
+br_ = createVoidElement (unsafeCreateDOMComponent "br")
 
 type Props_button =
-  ( children :: Array JSX
-  , disabled :: Boolean
+  ( disabled :: Boolean
   , form :: String
   , name :: String
   , type :: String
   , value :: String
   )
 
-button
+button_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_button)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-button = createElement (unsafeCreateDOMComponent "button")
-
-button_ :: Array JSX -> JSX
-button_ children = button { children }
+button_ = createElement (unsafeCreateDOMComponent "button")
 
 type Props_canvas =
-  ( children :: Array JSX
-  , height :: String
+  ( height :: String
   , width :: String
   )
 
-canvas
+canvas_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_canvas)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-canvas = createElement (unsafeCreateDOMComponent "canvas")
+canvas_ = createElement (unsafeCreateDOMComponent "canvas")
 
-canvas_ :: Array JSX -> JSX
-canvas_ children = canvas { children }
+type Props_caption =()
 
-type Props_caption =
-  ( children :: Array JSX
-  )
-
-caption
+caption_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_caption)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-caption = createElement (unsafeCreateDOMComponent "caption")
+caption_ = createElement (unsafeCreateDOMComponent "caption")
 
-caption_ :: Array JSX -> JSX
-caption_ children = caption { children }
+type Props_cite =()
 
-type Props_cite =
-  ( children :: Array JSX
-  )
-
-cite
+cite_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_cite)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-cite = createElement (unsafeCreateDOMComponent "cite")
+cite_ = createElement (unsafeCreateDOMComponent "cite")
 
-cite_ :: Array JSX -> JSX
-cite_ children = cite { children }
+type Props_code =()
 
-type Props_code =
-  ( children :: Array JSX
-  )
-
-code
+code_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_code)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-code = createElement (unsafeCreateDOMComponent "code")
-
-code_ :: Array JSX -> JSX
-code_ children = code { children }
+code_ = createElement (unsafeCreateDOMComponent "code")
 
 type Props_col =
   ( span :: Number
   , width :: String
   )
 
-col
+col_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_col)
-  => Record attrs
+  => Record attrs 
   -> JSX
-col = createElement (unsafeCreateDOMComponent "col")
+col_ = createVoidElement (unsafeCreateDOMComponent "col")
 
 type Props_colgroup =
-  ( children :: Array JSX
-  , span :: Number
+  ( span :: Number
   , width :: String
   )
 
-colgroup
+colgroup_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_colgroup)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-colgroup = createElement (unsafeCreateDOMComponent "colgroup")
-
-colgroup_ :: Array JSX -> JSX
-colgroup_ children = colgroup { children }
+colgroup_ = createElement (unsafeCreateDOMComponent "colgroup")
 
 type Props_data =
-  ( children :: Array JSX
-  , value :: String
+  ( value :: String
   )
 
-data'
+data_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_data)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-data' = createElement (unsafeCreateDOMComponent "data")
+data_ = createElement (unsafeCreateDOMComponent "data")
 
-data_ :: Array JSX -> JSX
-data_ children = data' { children }
+type Props_datalist =()
 
-type Props_datalist =
-  ( children :: Array JSX
-  )
-
-datalist
+datalist_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_datalist)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-datalist = createElement (unsafeCreateDOMComponent "datalist")
+datalist_ = createElement (unsafeCreateDOMComponent "datalist")
 
-datalist_ :: Array JSX -> JSX
-datalist_ children = datalist { children }
+type Props_dd =()
 
-type Props_dd =
-  ( children :: Array JSX
-  )
-
-dd
+dd_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_dd)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-dd = createElement (unsafeCreateDOMComponent "dd")
-
-dd_ :: Array JSX -> JSX
-dd_ children = dd { children }
+dd_ = createElement (unsafeCreateDOMComponent "dd")
 
 type Props_del =
-  ( children :: Array JSX
-  , cite :: String
+  ( cite :: String
   )
 
-del
+del_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_del)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-del = createElement (unsafeCreateDOMComponent "del")
-
-del_ :: Array JSX -> JSX
-del_ children = del { children }
+del_ = createElement (unsafeCreateDOMComponent "del")
 
 type Props_details =
-  ( children :: Array JSX
-  , open :: Boolean
+  ( open :: Boolean
   )
 
-details
+details_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_details)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-details = createElement (unsafeCreateDOMComponent "details")
-
-details_ :: Array JSX -> JSX
-details_ children = details { children }
+details_ = createElement (unsafeCreateDOMComponent "details")
 
 type Props_dfn =
-  ( children :: Array JSX
-  , title :: String
+  ( title :: String
   )
 
-dfn
+dfn_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_dfn)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-dfn = createElement (unsafeCreateDOMComponent "dfn")
-
-dfn_ :: Array JSX -> JSX
-dfn_ children = dfn { children }
+dfn_ = createElement (unsafeCreateDOMComponent "dfn")
 
 type Props_dialog =
-  ( children :: Array JSX
-  , open :: Boolean
+  ( open :: Boolean
   )
 
-dialog
+dialog_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_dialog)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-dialog = createElement (unsafeCreateDOMComponent "dialog")
+dialog_ = createElement (unsafeCreateDOMComponent "dialog")
 
-dialog_ :: Array JSX -> JSX
-dialog_ children = dialog { children }
+type Props_div =()
 
-type Props_div =
-  ( children :: Array JSX
-  )
-
-div
+div_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_div)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-div = createElement (unsafeCreateDOMComponent "div")
+div_ = createElement (unsafeCreateDOMComponent "div")
 
-div_ :: Array JSX -> JSX
-div_ children = div { children }
+type Props_dl =()
 
-type Props_dl =
-  ( children :: Array JSX
-  )
-
-dl
+dl_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_dl)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-dl = createElement (unsafeCreateDOMComponent "dl")
+dl_ = createElement (unsafeCreateDOMComponent "dl")
 
-dl_ :: Array JSX -> JSX
-dl_ children = dl { children }
+type Props_dt =()
 
-type Props_dt =
-  ( children :: Array JSX
-  )
-
-dt
+dt_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_dt)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-dt = createElement (unsafeCreateDOMComponent "dt")
+dt_ = createElement (unsafeCreateDOMComponent "dt")
 
-dt_ :: Array JSX -> JSX
-dt_ children = dt { children }
+type Props_em =()
 
-type Props_em =
-  ( children :: Array JSX
-  )
-
-em
+em_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_em)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-em = createElement (unsafeCreateDOMComponent "em")
-
-em_ :: Array JSX -> JSX
-em_ children = em { children }
+em_ = createElement (unsafeCreateDOMComponent "em")
 
 type Props_embed =
   ( height :: String
@@ -610,262 +484,185 @@ type Props_embed =
   , width :: String
   )
 
-embed
+embed_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_embed)
-  => Record attrs
+  => Record attrs 
   -> JSX
-embed = createElement (unsafeCreateDOMComponent "embed")
+embed_ = createVoidElement (unsafeCreateDOMComponent "embed")
 
 type Props_fieldset =
-  ( children :: Array JSX
-  , disabled :: Boolean
+  ( disabled :: Boolean
   , form :: String
   , name :: String
   )
 
-fieldset
+fieldset_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_fieldset)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-fieldset = createElement (unsafeCreateDOMComponent "fieldset")
+fieldset_ = createElement (unsafeCreateDOMComponent "fieldset")
 
-fieldset_ :: Array JSX -> JSX
-fieldset_ children = fieldset { children }
+type Props_figcaption =()
 
-type Props_figcaption =
-  ( children :: Array JSX
-  )
-
-figcaption
+figcaption_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_figcaption)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-figcaption = createElement (unsafeCreateDOMComponent "figcaption")
+figcaption_ = createElement (unsafeCreateDOMComponent "figcaption")
 
-figcaption_ :: Array JSX -> JSX
-figcaption_ children = figcaption { children }
+type Props_figure =()
 
-type Props_figure =
-  ( children :: Array JSX
-  )
-
-figure
+figure_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_figure)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-figure = createElement (unsafeCreateDOMComponent "figure")
+figure_ = createElement (unsafeCreateDOMComponent "figure")
 
-figure_ :: Array JSX -> JSX
-figure_ children = figure { children }
+type Props_footer =()
 
-type Props_footer =
-  ( children :: Array JSX
-  )
-
-footer
+footer_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_footer)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-footer = createElement (unsafeCreateDOMComponent "footer")
-
-footer_ :: Array JSX -> JSX
-footer_ children = footer { children }
+footer_ = createElement (unsafeCreateDOMComponent "footer")
 
 type Props_form =
   ( accept :: String
   , action :: String
-  , children :: Array JSX
   , method :: String
   , name :: String
   , target :: String
   )
 
-form
+form_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_form)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-form = createElement (unsafeCreateDOMComponent "form")
+form_ = createElement (unsafeCreateDOMComponent "form")
 
-form_ :: Array JSX -> JSX
-form_ children = form { children }
+type Props_h1 =()
 
-type Props_h1 =
-  ( children :: Array JSX
-  )
-
-h1
+h1_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_h1)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-h1 = createElement (unsafeCreateDOMComponent "h1")
+h1_ = createElement (unsafeCreateDOMComponent "h1")
 
-h1_ :: Array JSX -> JSX
-h1_ children = h1 { children }
+type Props_h2 =()
 
-type Props_h2 =
-  ( children :: Array JSX
-  )
-
-h2
+h2_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_h2)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-h2 = createElement (unsafeCreateDOMComponent "h2")
+h2_ = createElement (unsafeCreateDOMComponent "h2")
 
-h2_ :: Array JSX -> JSX
-h2_ children = h2 { children }
+type Props_h3 =()
 
-type Props_h3 =
-  ( children :: Array JSX
-  )
-
-h3
+h3_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_h3)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-h3 = createElement (unsafeCreateDOMComponent "h3")
+h3_ = createElement (unsafeCreateDOMComponent "h3")
 
-h3_ :: Array JSX -> JSX
-h3_ children = h3 { children }
+type Props_h4 =()
 
-type Props_h4 =
-  ( children :: Array JSX
-  )
-
-h4
+h4_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_h4)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-h4 = createElement (unsafeCreateDOMComponent "h4")
+h4_ = createElement (unsafeCreateDOMComponent "h4")
 
-h4_ :: Array JSX -> JSX
-h4_ children = h4 { children }
+type Props_h5 =()
 
-type Props_h5 =
-  ( children :: Array JSX
-  )
-
-h5
+h5_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_h5)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-h5 = createElement (unsafeCreateDOMComponent "h5")
+h5_ = createElement (unsafeCreateDOMComponent "h5")
 
-h5_ :: Array JSX -> JSX
-h5_ children = h5 { children }
+type Props_h6 =()
 
-type Props_h6 =
-  ( children :: Array JSX
-  )
-
-h6
+h6_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_h6)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-h6 = createElement (unsafeCreateDOMComponent "h6")
-
-h6_ :: Array JSX -> JSX
-h6_ children = h6 { children }
+h6_ = createElement (unsafeCreateDOMComponent "h6")
 
 type Props_head =
-  ( children :: Array JSX
-  , profile :: String
+  ( profile :: String
   )
 
-head
+head_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_head)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-head = createElement (unsafeCreateDOMComponent "head")
+head_ = createElement (unsafeCreateDOMComponent "head")
 
-head_ :: Array JSX -> JSX
-head_ children = head { children }
+type Props_header =()
 
-type Props_header =
-  ( children :: Array JSX
-  )
-
-header
+header_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_header)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-header = createElement (unsafeCreateDOMComponent "header")
+header_ = createElement (unsafeCreateDOMComponent "header")
 
-header_ :: Array JSX -> JSX
-header_ children = header { children }
+type Props_hgroup =()
 
-type Props_hgroup =
-  ( children :: Array JSX
-  )
-
-hgroup
+hgroup_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_hgroup)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-hgroup = createElement (unsafeCreateDOMComponent "hgroup")
-
-hgroup_ :: Array JSX -> JSX
-hgroup_ children = hgroup { children }
+hgroup_ = createElement (unsafeCreateDOMComponent "hgroup")
 
 type Props_hr =
   ( size :: Number
   , width :: String
   )
 
-hr
+hr_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_hr)
-  => Record attrs
+  => Record attrs 
   -> JSX
-hr = createElement (unsafeCreateDOMComponent "hr")
+hr_ = createVoidElement (unsafeCreateDOMComponent "hr")
 
 type Props_html =
-  ( children :: Array JSX
-  , manifest :: String
+  ( manifest :: String
   )
 
-html
+html_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_html)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-html = createElement (unsafeCreateDOMComponent "html")
+html_ = createElement (unsafeCreateDOMComponent "html")
 
-html_ :: Array JSX -> JSX
-html_ children = html { children }
+type Props_i =()
 
-type Props_i =
-  ( children :: Array JSX
-  )
-
-i
+i_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_i)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-i = createElement (unsafeCreateDOMComponent "i")
-
-i_ :: Array JSX -> JSX
-i_ children = i { children }
+i_ = createElement (unsafeCreateDOMComponent "i")
 
 type Props_iframe =
-  ( children :: Array JSX
-  , height :: String
+  ( height :: String
   , name :: String
   , sandbox :: String
   , scrolling :: String
@@ -873,15 +670,12 @@ type Props_iframe =
   , width :: String
   )
 
-iframe
+iframe_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_iframe)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-iframe = createElement (unsafeCreateDOMComponent "iframe")
-
-iframe_ :: Array JSX -> JSX
-iframe_ children = iframe { children }
+iframe_ = createElement (unsafeCreateDOMComponent "iframe")
 
 type Props_img =
   ( alt :: String
@@ -892,12 +686,12 @@ type Props_img =
   , width :: String
   )
 
-img
+img_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_img)
-  => Record attrs
+  => Record attrs 
   -> JSX
-img = createElement (unsafeCreateDOMComponent "img")
+img_ = createVoidElement (unsafeCreateDOMComponent "img")
 
 type Props_input =
   ( accept :: String
@@ -930,104 +724,78 @@ type Props_input =
   , width :: String
   )
 
-input
+input_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_input)
-  => Record attrs
+  => Record attrs 
   -> JSX
-input = createElement (unsafeCreateDOMComponent "input")
+input_ = createVoidElement (unsafeCreateDOMComponent "input")
 
 type Props_ins =
-  ( children :: Array JSX
-  , cite :: String
+  ( cite :: String
   )
 
-ins
+ins_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_ins)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-ins = createElement (unsafeCreateDOMComponent "ins")
+ins_ = createElement (unsafeCreateDOMComponent "ins")
 
-ins_ :: Array JSX -> JSX
-ins_ children = ins { children }
+type Props_kbd =()
 
-type Props_kbd =
-  ( children :: Array JSX
-  )
-
-kbd
+kbd_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_kbd)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-kbd = createElement (unsafeCreateDOMComponent "kbd")
-
-kbd_ :: Array JSX -> JSX
-kbd_ children = kbd { children }
+kbd_ = createElement (unsafeCreateDOMComponent "kbd")
 
 type Props_keygen =
   ( challenge :: String
-  , children :: Array JSX
   , disabled :: Boolean
   , form :: String
   , name :: String
   )
 
-keygen
+keygen_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_keygen)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-keygen = createElement (unsafeCreateDOMComponent "keygen")
-
-keygen_ :: Array JSX -> JSX
-keygen_ children = keygen { children }
+keygen_ = createElement (unsafeCreateDOMComponent "keygen")
 
 type Props_label =
-  ( children :: Array JSX
-  , form :: String
+  ( form :: String
   )
 
-label
+label_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_label)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-label = createElement (unsafeCreateDOMComponent "label")
+label_ = createElement (unsafeCreateDOMComponent "label")
 
-label_ :: Array JSX -> JSX
-label_ children = label { children }
+type Props_legend =()
 
-type Props_legend =
-  ( children :: Array JSX
-  )
-
-legend
+legend_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_legend)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-legend = createElement (unsafeCreateDOMComponent "legend")
-
-legend_ :: Array JSX -> JSX
-legend_ children = legend { children }
+legend_ = createElement (unsafeCreateDOMComponent "legend")
 
 type Props_li =
-  ( children :: Array JSX
-  , type :: String
+  ( type :: String
   , value :: String
   )
 
-li
+li_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_li)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-li = createElement (unsafeCreateDOMComponent "li")
-
-li_ :: Array JSX -> JSX
-li_ children = li { children }
+li_ = createElement (unsafeCreateDOMComponent "li")
 
 type Props_link =
   ( color :: String
@@ -1043,113 +811,83 @@ type Props_link =
   , type :: String
   )
 
-link
+link_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_link)
-  => Record attrs
+  => Record attrs 
   -> JSX
-link = createElement (unsafeCreateDOMComponent "link")
+link_ = createVoidElement (unsafeCreateDOMComponent "link")
 
-type Props_main =
-  ( children :: Array JSX
-  )
+type Props_main =()
 
-main
+main_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_main)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-main = createElement (unsafeCreateDOMComponent "main")
-
-main_ :: Array JSX -> JSX
-main_ children = main { children }
+main_ = createElement (unsafeCreateDOMComponent "main")
 
 type Props_map =
-  ( children :: Array JSX
-  , name :: String
+  ( name :: String
   )
 
-map
+map_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_map)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-map = createElement (unsafeCreateDOMComponent "map")
+map_ = createElement (unsafeCreateDOMComponent "map")
 
-map_ :: Array JSX -> JSX
-map_ children = map { children }
+type Props_mark =()
 
-type Props_mark =
-  ( children :: Array JSX
-  )
-
-mark
+mark_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_mark)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-mark = createElement (unsafeCreateDOMComponent "mark")
+mark_ = createElement (unsafeCreateDOMComponent "mark")
 
-mark_ :: Array JSX -> JSX
-mark_ children = mark { children }
+type Props_math =()
 
-type Props_math =
-  ( children :: Array JSX
-  )
-
-math
+math_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_math)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-math = createElement (unsafeCreateDOMComponent "math")
+math_ = createElement (unsafeCreateDOMComponent "math")
 
-math_ :: Array JSX -> JSX
-math_ children = math { children }
+type Props_menu =()
 
-type Props_menu =
-  ( children :: Array JSX
-  )
-
-menu
+menu_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_menu)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-menu = createElement (unsafeCreateDOMComponent "menu")
+menu_ = createElement (unsafeCreateDOMComponent "menu")
 
-menu_ :: Array JSX -> JSX
-menu_ children = menu { children }
+type Props_menuitem =()
 
-type Props_menuitem =
-  ( children :: Array JSX
-  )
-
-menuitem
+menuitem_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_menuitem)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-menuitem = createElement (unsafeCreateDOMComponent "menuitem")
-
-menuitem_ :: Array JSX -> JSX
-menuitem_ children = menuitem { children }
+menuitem_ = createElement (unsafeCreateDOMComponent "menuitem")
 
 type Props_meta =
   ( content :: String
   , name :: String
   )
 
-meta
+meta_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_meta)
-  => Record attrs
+  => Record attrs 
   -> JSX
-meta = createElement (unsafeCreateDOMComponent "meta")
+meta_ = createVoidElement (unsafeCreateDOMComponent "meta")
 
 type Props_meter =
-  ( children :: Array JSX
-  , high :: String
+  ( high :: String
   , low :: String
   , max :: Number
   , min :: Number
@@ -1157,47 +895,33 @@ type Props_meter =
   , value :: String
   )
 
-meter
+meter_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_meter)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-meter = createElement (unsafeCreateDOMComponent "meter")
+meter_ = createElement (unsafeCreateDOMComponent "meter")
 
-meter_ :: Array JSX -> JSX
-meter_ children = meter { children }
+type Props_nav =()
 
-type Props_nav =
-  ( children :: Array JSX
-  )
-
-nav
+nav_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_nav)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-nav = createElement (unsafeCreateDOMComponent "nav")
+nav_ = createElement (unsafeCreateDOMComponent "nav")
 
-nav_ :: Array JSX -> JSX
-nav_ children = nav { children }
+type Props_noscript =()
 
-type Props_noscript =
-  ( children :: Array JSX
-  )
-
-noscript
+noscript_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_noscript)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-noscript = createElement (unsafeCreateDOMComponent "noscript")
-
-noscript_ :: Array JSX -> JSX
-noscript_ children = noscript { children }
+noscript_ = createElement (unsafeCreateDOMComponent "noscript")
 
 type Props_object =
-  ( children :: Array JSX
-  , data :: String
+  ( data :: String
   , form :: String
   , height :: String
   , name :: String
@@ -1205,96 +929,72 @@ type Props_object =
   , width :: String
   )
 
-object
+object_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_object)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-object = createElement (unsafeCreateDOMComponent "object")
-
-object_ :: Array JSX -> JSX
-object_ children = object { children }
+object_ = createElement (unsafeCreateDOMComponent "object")
 
 type Props_ol =
-  ( children :: Array JSX
-  , reversed :: Boolean
+  ( reversed :: Boolean
   , start :: Number
   , type :: String
   )
 
-ol
+ol_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_ol)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-ol = createElement (unsafeCreateDOMComponent "ol")
-
-ol_ :: Array JSX -> JSX
-ol_ children = ol { children }
+ol_ = createElement (unsafeCreateDOMComponent "ol")
 
 type Props_optgroup =
-  ( children :: Array JSX
-  , disabled :: Boolean
+  ( disabled :: Boolean
   , label :: String
   )
 
-optgroup
+optgroup_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_optgroup)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-optgroup = createElement (unsafeCreateDOMComponent "optgroup")
-
-optgroup_ :: Array JSX -> JSX
-optgroup_ children = optgroup { children }
+optgroup_ = createElement (unsafeCreateDOMComponent "optgroup")
 
 type Props_option =
-  ( children :: Array JSX
-  , disabled :: Boolean
+  ( disabled :: Boolean
   , label :: String
   , selected :: Boolean
   , value :: String
   )
 
-option
+option_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_option)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-option = createElement (unsafeCreateDOMComponent "option")
-
-option_ :: Array JSX -> JSX
-option_ children = option { children }
+option_ = createElement (unsafeCreateDOMComponent "option")
 
 type Props_output =
-  ( children :: Array JSX
-  , form :: String
+  ( form :: String
   , name :: String
   )
 
-output
+output_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_output)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-output = createElement (unsafeCreateDOMComponent "output")
+output_ = createElement (unsafeCreateDOMComponent "output")
 
-output_ :: Array JSX -> JSX
-output_ children = output { children }
+type Props_p =()
 
-type Props_p =
-  ( children :: Array JSX
-  )
-
-p
+p_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_p)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-p = createElement (unsafeCreateDOMComponent "p")
-
-p_ :: Array JSX -> JSX
-p_ children = p { children }
+p_ = createElement (unsafeCreateDOMComponent "p")
 
 type Props_param =
   ( name :: String
@@ -1302,174 +1002,121 @@ type Props_param =
   , value :: String
   )
 
-param
+param_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_param)
-  => Record attrs
+  => Record attrs 
   -> JSX
-param = createElement (unsafeCreateDOMComponent "param")
+param_ = createVoidElement (unsafeCreateDOMComponent "param")
 
-type Props_picture =
-  ( children :: Array JSX
-  )
+type Props_picture =()
 
-picture
+picture_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_picture)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-picture = createElement (unsafeCreateDOMComponent "picture")
-
-picture_ :: Array JSX -> JSX
-picture_ children = picture { children }
+picture_ = createElement (unsafeCreateDOMComponent "picture")
 
 type Props_pre =
-  ( children :: Array JSX
-  , width :: String
+  ( width :: String
   )
 
-pre
+pre_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_pre)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-pre = createElement (unsafeCreateDOMComponent "pre")
-
-pre_ :: Array JSX -> JSX
-pre_ children = pre { children }
+pre_ = createElement (unsafeCreateDOMComponent "pre")
 
 type Props_progress =
-  ( children :: Array JSX
-  , max :: Number
+  ( max :: Number
   , value :: String
   )
 
-progress
+progress_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_progress)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-progress = createElement (unsafeCreateDOMComponent "progress")
-
-progress_ :: Array JSX -> JSX
-progress_ children = progress { children }
+progress_ = createElement (unsafeCreateDOMComponent "progress")
 
 type Props_q =
-  ( children :: Array JSX
-  , cite :: String
+  ( cite :: String
   )
 
-q
+q_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_q)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-q = createElement (unsafeCreateDOMComponent "q")
+q_ = createElement (unsafeCreateDOMComponent "q")
 
-q_ :: Array JSX -> JSX
-q_ children = q { children }
+type Props_rb =()
 
-type Props_rb =
-  ( children :: Array JSX
-  )
-
-rb
+rb_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_rb)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-rb = createElement (unsafeCreateDOMComponent "rb")
+rb_ = createElement (unsafeCreateDOMComponent "rb")
 
-rb_ :: Array JSX -> JSX
-rb_ children = rb { children }
+type Props_rp =()
 
-type Props_rp =
-  ( children :: Array JSX
-  )
-
-rp
+rp_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_rp)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-rp = createElement (unsafeCreateDOMComponent "rp")
+rp_ = createElement (unsafeCreateDOMComponent "rp")
 
-rp_ :: Array JSX -> JSX
-rp_ children = rp { children }
+type Props_rt =()
 
-type Props_rt =
-  ( children :: Array JSX
-  )
-
-rt
+rt_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_rt)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-rt = createElement (unsafeCreateDOMComponent "rt")
+rt_ = createElement (unsafeCreateDOMComponent "rt")
 
-rt_ :: Array JSX -> JSX
-rt_ children = rt { children }
+type Props_rtc =()
 
-type Props_rtc =
-  ( children :: Array JSX
-  )
-
-rtc
+rtc_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_rtc)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-rtc = createElement (unsafeCreateDOMComponent "rtc")
+rtc_ = createElement (unsafeCreateDOMComponent "rtc")
 
-rtc_ :: Array JSX -> JSX
-rtc_ children = rtc { children }
+type Props_ruby =()
 
-type Props_ruby =
-  ( children :: Array JSX
-  )
-
-ruby
+ruby_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_ruby)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-ruby = createElement (unsafeCreateDOMComponent "ruby")
+ruby_ = createElement (unsafeCreateDOMComponent "ruby")
 
-ruby_ :: Array JSX -> JSX
-ruby_ children = ruby { children }
+type Props_s =()
 
-type Props_s =
-  ( children :: Array JSX
-  )
-
-s
+s_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_s)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-s = createElement (unsafeCreateDOMComponent "s")
+s_ = createElement (unsafeCreateDOMComponent "s")
 
-s_ :: Array JSX -> JSX
-s_ children = s { children }
+type Props_samp =()
 
-type Props_samp =
-  ( children :: Array JSX
-  )
-
-samp
+samp_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_samp)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-samp = createElement (unsafeCreateDOMComponent "samp")
-
-samp_ :: Array JSX -> JSX
-samp_ children = samp { children }
+samp_ = createElement (unsafeCreateDOMComponent "samp")
 
 type Props_script =
   ( async :: Boolean
-  , children :: Array JSX
   , defer :: Boolean
   , integrity :: String
   , nonce :: String
@@ -1477,33 +1124,24 @@ type Props_script =
   , type :: String
   )
 
-script
+script_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_script)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-script = createElement (unsafeCreateDOMComponent "script")
+script_ = createElement (unsafeCreateDOMComponent "script")
 
-script_ :: Array JSX -> JSX
-script_ children = script { children }
+type Props_section =()
 
-type Props_section =
-  ( children :: Array JSX
-  )
-
-section
+section_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_section)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-section = createElement (unsafeCreateDOMComponent "section")
-
-section_ :: Array JSX -> JSX
-section_ children = section { children }
+section_ = createElement (unsafeCreateDOMComponent "section")
 
 type Props_select =
-  ( children :: Array JSX
-  , defaultValue :: String
+  ( defaultValue :: String
   , disabled :: Boolean
   , form :: String
   , multiple :: Boolean
@@ -1514,44 +1152,32 @@ type Props_select =
   , value :: String
   )
 
-select
+select_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_select)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-select = createElement (unsafeCreateDOMComponent "select")
-
-select_ :: Array JSX -> JSX
-select_ children = select { children }
+select_ = createElement (unsafeCreateDOMComponent "select")
 
 type Props_slot =
-  ( children :: Array JSX
-  , name :: String
+  ( name :: String
   )
 
-slot
+slot_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_slot)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-slot = createElement (unsafeCreateDOMComponent "slot")
+slot_ = createElement (unsafeCreateDOMComponent "slot")
 
-slot_ :: Array JSX -> JSX
-slot_ children = slot { children }
+type Props_small =()
 
-type Props_small =
-  ( children :: Array JSX
-  )
-
-small
+small_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_small)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-small = createElement (unsafeCreateDOMComponent "small")
-
-small_ :: Array JSX -> JSX
-small_ children = small { children }
+small_ = createElement (unsafeCreateDOMComponent "small")
 
 type Props_source =
   ( media :: String
@@ -1560,100 +1186,71 @@ type Props_source =
   , type :: String
   )
 
-source
+source_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_source)
-  => Record attrs
+  => Record attrs 
   -> JSX
-source = createElement (unsafeCreateDOMComponent "source")
+source_ = createVoidElement (unsafeCreateDOMComponent "source")
 
-type Props_span =
-  ( children :: Array JSX
-  )
+type Props_span =()
 
-span
+span_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_span)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-span = createElement (unsafeCreateDOMComponent "span")
+span_ = createElement (unsafeCreateDOMComponent "span")
 
-span_ :: Array JSX -> JSX
-span_ children = span { children }
+type Props_strong =()
 
-type Props_strong =
-  ( children :: Array JSX
-  )
-
-strong
+strong_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_strong)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-strong = createElement (unsafeCreateDOMComponent "strong")
-
-strong_ :: Array JSX -> JSX
-strong_ children = strong { children }
+strong_ = createElement (unsafeCreateDOMComponent "strong")
 
 type Props_style =
-  ( children :: Array JSX
-  , media :: String
+  ( media :: String
   , nonce :: String
   , title :: String
   , type :: String
   )
 
-style
+style_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_style)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-style = createElement (unsafeCreateDOMComponent "style")
+style_ = createElement (unsafeCreateDOMComponent "style")
 
-style_ :: Array JSX -> JSX
-style_ children = style { children }
+type Props_sub =()
 
-type Props_sub =
-  ( children :: Array JSX
-  )
-
-sub
+sub_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_sub)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-sub = createElement (unsafeCreateDOMComponent "sub")
+sub_ = createElement (unsafeCreateDOMComponent "sub")
 
-sub_ :: Array JSX -> JSX
-sub_ children = sub { children }
+type Props_summary =()
 
-type Props_summary =
-  ( children :: Array JSX
-  )
-
-summary
+summary_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_summary)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-summary = createElement (unsafeCreateDOMComponent "summary")
+summary_ = createElement (unsafeCreateDOMComponent "summary")
 
-summary_ :: Array JSX -> JSX
-summary_ children = summary { children }
+type Props_sup =()
 
-type Props_sup =
-  ( children :: Array JSX
-  )
-
-sup
+sup_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_sup)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-sup = createElement (unsafeCreateDOMComponent "sup")
-
-sup_ :: Array JSX -> JSX
-sup_ children = sup { children }
+sup_ = createElement (unsafeCreateDOMComponent "sup")
 
 type Props_svg =
   ( accentHeight :: String
@@ -1678,7 +1275,6 @@ type Props_svg =
   , by :: String
   , calcMode :: String
   , capHeight :: String
-  , children :: Array JSX
   , clip :: String
   , clipPath :: String
   , clipPathUnits :: String
@@ -1901,82 +1497,60 @@ type Props_svg =
   , zoomAndPan :: String
   )
 
-svg
+svg_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_svg)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-svg = createElement (unsafeCreateDOMComponent "svg")
-
-svg_ :: Array JSX -> JSX
-svg_ children = svg { children }
+svg_ = createElement (unsafeCreateDOMComponent "svg")
 
 type Props_table =
-  ( children :: Array JSX
-  , summary :: String
+  ( summary :: String
   , width :: String
   )
 
-table
+table_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_table)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-table = createElement (unsafeCreateDOMComponent "table")
+table_ = createElement (unsafeCreateDOMComponent "table")
 
-table_ :: Array JSX -> JSX
-table_ children = table { children }
+type Props_tbody =()
 
-type Props_tbody =
-  ( children :: Array JSX
-  )
-
-tbody
+tbody_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_tbody)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-tbody = createElement (unsafeCreateDOMComponent "tbody")
-
-tbody_ :: Array JSX -> JSX
-tbody_ children = tbody { children }
+tbody_ = createElement (unsafeCreateDOMComponent "tbody")
 
 type Props_td =
-  ( children :: Array JSX
-  , headers :: String
+  ( headers :: String
   , height :: String
   , scope :: String
   , width :: String
   )
 
-td
+td_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_td)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-td = createElement (unsafeCreateDOMComponent "td")
+td_ = createElement (unsafeCreateDOMComponent "td")
 
-td_ :: Array JSX -> JSX
-td_ children = td { children }
+type Props_template =()
 
-type Props_template =
-  ( children :: Array JSX
-  )
-
-template
+template_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_template)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-template = createElement (unsafeCreateDOMComponent "template")
-
-template_ :: Array JSX -> JSX
-template_ children = template { children }
+template_ = createElement (unsafeCreateDOMComponent "template")
 
 type Props_textarea =
   ( autoCapitalize :: String
   , autoCorrect :: String
-  , children :: Array JSX
   , cols :: Number
   , defaultValue :: String
   , disabled :: Boolean
@@ -1990,103 +1564,71 @@ type Props_textarea =
   , wrap :: String
   )
 
-textarea
+textarea_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_textarea)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-textarea = createElement (unsafeCreateDOMComponent "textarea")
+textarea_ = createElement (unsafeCreateDOMComponent "textarea")
 
-textarea_ :: Array JSX -> JSX
-textarea_ children = textarea { children }
+type Props_tfoot =()
 
-type Props_tfoot =
-  ( children :: Array JSX
-  )
-
-tfoot
+tfoot_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_tfoot)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-tfoot = createElement (unsafeCreateDOMComponent "tfoot")
-
-tfoot_ :: Array JSX -> JSX
-tfoot_ children = tfoot { children }
+tfoot_ = createElement (unsafeCreateDOMComponent "tfoot")
 
 type Props_th =
-  ( children :: Array JSX
-  , headers :: String
+  ( headers :: String
   , height :: String
   , scope :: String
   , width :: String
   )
 
-th
+th_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_th)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-th = createElement (unsafeCreateDOMComponent "th")
+th_ = createElement (unsafeCreateDOMComponent "th")
 
-th_ :: Array JSX -> JSX
-th_ children = th { children }
+type Props_thead =()
 
-type Props_thead =
-  ( children :: Array JSX
-  )
-
-thead
+thead_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_thead)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-thead = createElement (unsafeCreateDOMComponent "thead")
+thead_ = createElement (unsafeCreateDOMComponent "thead")
 
-thead_ :: Array JSX -> JSX
-thead_ children = thead { children }
+type Props_time =()
 
-type Props_time =
-  ( children :: Array JSX
-  )
-
-time
+time_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_time)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-time = createElement (unsafeCreateDOMComponent "time")
+time_ = createElement (unsafeCreateDOMComponent "time")
 
-time_ :: Array JSX -> JSX
-time_ children = time { children }
+type Props_title =()
 
-type Props_title =
-  ( children :: Array JSX
-  )
-
-title
+title_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_title)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-title = createElement (unsafeCreateDOMComponent "title")
+title_ = createElement (unsafeCreateDOMComponent "title")
 
-title_ :: Array JSX -> JSX
-title_ children = title { children }
+type Props_tr =()
 
-type Props_tr =
-  ( children :: Array JSX
-  )
-
-tr
+tr_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_tr)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-tr = createElement (unsafeCreateDOMComponent "tr")
-
-tr_ :: Array JSX -> JSX
-tr_ children = tr { children }
+tr_ = createElement (unsafeCreateDOMComponent "tr")
 
 type Props_track =
   ( default :: Boolean
@@ -2095,59 +1637,44 @@ type Props_track =
   , src :: String
   )
 
-track
+track_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_track)
-  => Record attrs
+  => Record attrs 
   -> JSX
-track = createElement (unsafeCreateDOMComponent "track")
+track_ = createVoidElement (unsafeCreateDOMComponent "track")
 
-type Props_u =
-  ( children :: Array JSX
-  )
+type Props_u =()
 
-u
+u_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_u)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-u = createElement (unsafeCreateDOMComponent "u")
-
-u_ :: Array JSX -> JSX
-u_ children = u { children }
+u_ = createElement (unsafeCreateDOMComponent "u")
 
 type Props_ul =
-  ( children :: Array JSX
-  , type :: String
+  ( type :: String
   )
 
-ul
+ul_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_ul)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-ul = createElement (unsafeCreateDOMComponent "ul")
+ul_ = createElement (unsafeCreateDOMComponent "ul")
 
-ul_ :: Array JSX -> JSX
-ul_ children = ul { children }
+type Props_var =()
 
-type Props_var =
-  ( children :: Array JSX
-  )
-
-var
+var_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_var)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-var = createElement (unsafeCreateDOMComponent "var")
-
-var_ :: Array JSX -> JSX
-var_ children = var { children }
+var_ = createElement (unsafeCreateDOMComponent "var")
 
 type Props_video =
-  ( children :: Array JSX
-  , controls :: Boolean
+  ( controls :: Boolean
   , height :: String
   , loop :: Boolean
   , muted :: Boolean
@@ -2158,21 +1685,19 @@ type Props_video =
   , width :: String
   )
 
-video
+video_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_video)
-  => Record attrs
+  => Record attrs -> Array JSX
   -> JSX
-video = createElement (unsafeCreateDOMComponent "video")
-
-video_ :: Array JSX -> JSX
-video_ children = video { children }
+video_ = createElement (unsafeCreateDOMComponent "video")
 
 type Props_wbr =()
 
-wbr
+wbr_
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedProps Props_wbr)
-  => Record attrs
+  => Record attrs 
   -> JSX
-wbr = createElement (unsafeCreateDOMComponent "wbr")
+wbr_ = createVoidElement (unsafeCreateDOMComponent "wbr")
+

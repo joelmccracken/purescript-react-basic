@@ -2,6 +2,7 @@ module React.Basic
   ( react
   , stateless
   , createElement
+  , createVoidElement
   , createElementKeyed
   , empty
   , fragment
@@ -12,7 +13,7 @@ module React.Basic
 
 import Prelude
 
-import Data.Function.Uncurried (Fn2, Fn3, mkFn3, runFn2)
+import Data.Function.Uncurried (Fn2, Fn3, mkFn3, runFn2, runFn3)
 import Effect (Effect)
 import Effect.Uncurried (EffectFn3, mkEffectFn3)
 import Unsafe.Coerce (unsafeCoerce)
@@ -80,8 +81,16 @@ createElement
   :: forall props
    . ReactComponent { | props }
   -> { | props }
+  -> Array JSX
   -> JSX
-createElement = runFn2 createElement_
+createElement = runFn3 createElement_
+
+createVoidElement
+  :: forall props
+   . ReactComponent { | props }
+   -> { | props }
+   -> JSX
+createVoidElement c attrs = createElement c attrs []
 
 -- | Like `createElement`, plus a `key` for rendering components in a dynamic list.
 -- | For more information see: https://reactjs.org/docs/reconciliation.html#keys
@@ -113,13 +122,14 @@ fragmentKeyed = runFn2 fragmentKeyed_
 foreign import component_
   :: forall props state fx
    . { displayName :: String
-     , initialState :: { | state }
+
+, initialState :: { | state }
      , receiveProps :: EffectFn3 { | props } { | state } (SetState state fx) Unit
      , render :: Fn3 { | props } { | state } (SetState state fx) JSX
      }
   -> ReactComponent { | props }
 
-foreign import createElement_ :: forall props. Fn2 (ReactComponent { | props }) { | props } JSX
+foreign import createElement_ :: forall props. Fn3 (ReactComponent { | props }) { | props } (Array JSX) JSX
 
 foreign import createElementKeyed_ :: forall props. Fn2 (ReactComponent { | props }) { key :: String | props } JSX
 
