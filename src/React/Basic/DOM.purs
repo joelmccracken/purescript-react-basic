@@ -682,6 +682,7 @@ type Props_form =
   , children :: Array JSX
   , method :: String
   , name :: String
+  , onSubmit :: EventHandler
   , target :: String
   )
 
