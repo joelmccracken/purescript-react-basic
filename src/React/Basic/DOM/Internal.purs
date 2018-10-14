@@ -89,6 +89,10 @@ type SharedProps specific =
   , onBlur            :: EventHandler
   , onClick           :: EventHandler
   , onFocus           :: EventHandler
+  , onKeyDown         :: EventHandler
+  , onKeyPress        :: EventHandler
+  , onKeyUp           :: EventHandler
+  , onDoubleClick     :: EventHandler
   -- TODO: add more common event handlers
   | specific
   )
